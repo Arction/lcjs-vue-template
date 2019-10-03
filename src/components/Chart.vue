@@ -12,7 +12,8 @@ export default {
   data() {
     return {
       id: null,
-      chart: null
+      chart: null,
+      lineSeries: null
     }
   },
   methods: {
@@ -22,7 +23,7 @@ export default {
       // Set chart title
       this.chart.setTitle('Getting Started')
       // Add line series to the chart
-      const lineSeries = this.chart.addLineSeries()
+      this.lineSeries = this.chart.addLineSeries()
       // Set stroke style of the line
       lineSeries.setStrokeStyle((style) => style.setThickness(5))
       // Add data points to the line series
@@ -39,8 +40,8 @@ export default {
     this.createChart()
   },
   beforeDestroy() {
-    // "dispose" should be called when the component is unmounted to free all the resources used by the chart.
-    this.chart.dispose()
+    // "dispose" should be called when the component is unmounted to free all the resources used by the chart
+    this.lineSeries.dispose()
   }
 }
 </script>
