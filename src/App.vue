@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" style="height: 100vh">
     <!-- Create Chart component and pass data points to the created chart -->
-    <Chart :points="points"/>
+      <app-chart 
+        :points="points"
+      ></app-chart>
   </div>
 </template>
 
@@ -23,7 +25,7 @@ export default {
   },
   components: {
     // Include Chart component to the app
-    Chart
+    appChart: Chart
   }
 }
 </script>
