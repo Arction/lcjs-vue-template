@@ -1,6 +1,16 @@
-# hello-world
+# LightningChart<sup>&#174;</sup> JS Vue usage example
 
-## Project setup
+This repository showcases how to integrate LightingChart<sup>&#174;</sup> JS charting library to a Vue application.
+
+More information about LightningChart<sup>&#174;</sup> JS can be found from our website, https://www.arction.com/lightningchart-js/.
+
+This project was bootstrapped with [Creating a Project](https://cli.vuejs.org/guide/creating-a-project.html).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### Install npm dependencies
 ```
 npm install
 ```
