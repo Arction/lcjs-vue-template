@@ -10,7 +10,7 @@ This project was bootstrapped with [Creating a Project](https://cli.vuejs.org/gu
 
 In the project directory, you can run:
 
-### Install npm dependencies
+### Install project dependencies
 ```
 npm install
 ```
@@ -29,6 +29,8 @@ npm run build
 ```
 npm run test
 ```
+
+Launches the test runner in the interactive watch mode.<br>
 
 ### Lints and fixes files
 ```
