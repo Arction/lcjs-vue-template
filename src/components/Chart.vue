@@ -1,6 +1,6 @@
 <template>
   <!-- Allocate chart inside div container -->
-  <div :id="id" class="fill"></div>
+  <div :id="chartId" class="fill"></div>
 </template>
 
 <script>
@@ -11,19 +11,18 @@ export default {
   props: ['points'],
   data() {
     return {
-      id: null,
+      chartId: null,
       chart: null,
-      lineSeries: null
     }
   },
   methods: {
     createChart() {
       // Create chartXY
-      this.chart = lightningChart().ChartXY({containerId: `${this.id}`})
+      this.chart = lightningChart().ChartXY({containerId: `${this.chartId}`})
       // Set chart title
       this.chart.setTitle('Getting Started')
       // Add line series to the chart
-      this.lineSeries = this.chart.addLineSeries()
+      const lineSeries = this.chart.addLineSeries()
       // Set stroke style of the line
       lineSeries.setStrokeStyle((style) => style.setThickness(5))
       // Add data points to the line series
@@ -32,7 +31,7 @@ export default {
   },
   beforeMount() {
     // Generate random ID to us as the containerId for the chart and the target div id
-    this.id = Math.trunc(Math.random() * 1000000)
+    this.chartId = Math.trunc(Math.random() * 1000000)
   },
   mounted() {
     // Chart can only be created when the component has mounted the DOM because 
@@ -41,7 +40,7 @@ export default {
   },
   beforeDestroy() {
     // "dispose" should be called when the component is unmounted to free all the resources used by the chart
-    this.lineSeries.dispose()
+    this.chart.dispose()
   }
 }
 </script>
