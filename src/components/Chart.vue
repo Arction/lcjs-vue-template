@@ -10,9 +10,13 @@ export default {
   name: 'Chart',
   props: ['points'],
   data() {
+    // Add the chart to the data in a way that Vue will not attach it's observers to it.
+    // If the chart variable would be added in the return object, Vue would attach the observers and 
+    // every time LightningChart JS made a change to any of it's internal variables, vue would try to observe the change and update.
+    // Observing would slow down the chart a lot.
+    this.chart = null
     return {
       chartId: null,
-      chart: null,
     }
   },
   methods: {
