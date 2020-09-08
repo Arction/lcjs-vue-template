@@ -22,7 +22,7 @@ export default {
   methods: {
     createChart() {
       // Create chartXY
-      this.chart = lightningChart().ChartXY({containerId: `${this.chartId}`})
+      this.chart = lightningChart().ChartXY({container: `${this.chartId}`})
       // Set chart title
       this.chart.setTitle('Getting Started')
       // Add line series to the chart
