@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@arction/lcjs": "^3.0.0",
+    "@arction/lcjs": "^3.1.0",
     "core-js": "^3.11.2",
     "vue": "^2.6.12"
   },
