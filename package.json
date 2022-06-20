@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@arction/lcjs": "^3.4.0",
+    "@arction/xydata": "^1.4.0",
+    "@vue/compat": "^3.1.0-0",
     "core-js": "^3.11.2",
-    "vue": "^2.6.12"
+    "vue": "^3.1.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.12",
@@ -19,7 +21,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.25.0",
     "eslint-plugin-vue": "^7.9.0",
-    "vue-template-compiler": "^2.6.12"
+    "@vue/compiler-sfc": "^3.1.0-0"
   },
   "eslintConfig": {
     "root": true,

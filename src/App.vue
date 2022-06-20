@@ -15,12 +15,12 @@ export default {
   data: () => {
     return {
       // Data points for the chart
-      points: [
-        { x: 0, y: 0 },
-        { x: 1, y: 7 },
-        { x: 2, y: 3 },
-        { x: 3, y: 10 }
-      ]
+      // points: [
+      //   { x: 0, y: 0 },
+      //   { x: 1, y: 7 },
+      //   { x: 2, y: 3 },
+      //   { x: 3, y: 10 }
+      // ]
     }
   },
   components: {
