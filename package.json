@@ -1,5 +1,5 @@
 {
-  "name": "lcjs-vue-template",
+  "name": "vue-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,19 +9,17 @@
   },
   "dependencies": {
     "@arction/lcjs": "^3.4.0",
-    "@arction/xydata": "^1.4.0",
-    "@vue/compat": "^3.1.0-0",
-    "core-js": "^3.11.2",
-    "vue": "^3.1.0-0"
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
-    "@vue/cli-service": "^4.5.12",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.25.0",
-    "eslint-plugin-vue": "^7.9.0",
-    "@vue/compiler-sfc": "^3.1.0-0"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
     "root": true,
@@ -29,21 +27,18 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
+      "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-    "rules": {},
     "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
   ]
 }
