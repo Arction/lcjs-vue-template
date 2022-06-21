@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     createChart() {
-      console.log('test 2')
       // Create chartXY
       this.chart = lightningChart().ChartXY({container: `${this.chartId}`})
       // Set chart title
@@ -38,7 +37,6 @@ export default {
     this.chartId = Math.trunc(Math.random() * 1000000)
   },
    mounted() {
-    console.log('test 1')
     // Chart can only be created when the component has mounted the DOM because 
     // the chart needs the element with specified containerId to exist in the DOM
     this.createChart()
