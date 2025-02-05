@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { lightningChart } from "@lightningchart/lcjs";
+import { lightningChart, emptyFill } from "@lightningchart/lcjs";
 
 export default {
   name: "ChartData",
@@ -21,16 +21,21 @@ export default {
   methods: {
     createChart() {
       // Create chartXY
-      this.lc = lightningChart();
+      this.lc = lightningChart({
+        // NOTE: License goes here
+        license: "",
+      });
       this.chart = this.lc.ChartXY({ container: `${this.chartId}` });
       // Set chart title
       this.chart.setTitle("Getting Started");
       // Add line series to the chart
-      const lineSeries = this.chart.addLineSeries();
+      const lineSeries = this.chart
+        .addPointLineAreaSeries({ dataPattern: "ProgressiveX" })
+        .setAreaFillStyle(emptyFill);
       // Set stroke style of the line
       lineSeries.setStrokeStyle((style) => style.setThickness(5));
       // Add data points to the line series
-      lineSeries.add(this.points);
+      lineSeries.appendJSON(this.points);
     },
   },
   beforeMount() {
